@@ -2,14 +2,14 @@
 {% block body_content %}
     <form action='' method='POST'>
         {{ form.hidden_tag() }}
-        {{ form.film }} <br>
+        {{ form.film.label }} {{ form.film }} <br>
         {% if form.film.errors %}
             {% for error in form.film.errors %}
                 {{ error }}<br>
             {% endfor %}
         {% endif %}
-	{{ form.length }} <br>
-	{{ form.rating }} <br>
+	{{ form.length.label }} {{ form.length }} <br>
+	{{ form.rating.label }} {{ form.rating }} <br>
         {{ form.submit }}
     </form>
 {% endblock body_content %}
