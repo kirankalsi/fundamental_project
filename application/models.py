@@ -4,15 +4,16 @@ class Genres(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     genre_type = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(255), nullable=False)
-    rating = db.Column(db.Float), nullable=False)
-    film-genres = db.relationship('FilmGenres', backref='genre')
+    rating = db.Column(db.Float, nullable=False)
+    filmgenres = db.relationship('FilmGenres', backref='genre')
 
 class Films(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(225), nullable=False)
     duration = db.Column(db.String(20), nullable=False)
     genre_id = db.Column(db.Integer, db.ForeignKey('genres.id'), nullable=False)
     age_rating = db.Column(db.String(5), nullable=False)
-    film-genres = db.relationship('FilmGenres', backref='film')
+    filmgenres = db.relationship('FilmGenres', backref='film')
 
 class FilmGenres(db.Model):
     id = db.Column(db.Integer, primary_key=True)
