@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+    <form action='' method='POST'>
+        {{ form.hidden_tag() }}
+        {{ form.genre.label }} {{ form.genre }} <br>
+        {% if form.genre.errors %}
+            {% for error in form.genre.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+        {{ form.description.label }} {{ form.description }} <br>
+        {{ form.rating.label }} {{ form.rating }} <br>
+        {{ form.submit }}
+    </form>
+{% endblock body_content %}

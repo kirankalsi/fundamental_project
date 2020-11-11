@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, request
 
 from application import app, db
 from application.models import Films, Genres, FilmGenres
-from application.forms import GenreForm, FilmForm, SameFilmCheck
+from application.forms import GenreForm, SameGenreCheck, FilmForm, SameFilmCheck
 
 @app.route('/')
 def index():
@@ -14,7 +14,7 @@ def index():
 def add_genre():
     form = GenreForm()
     if form.validate_on_submit():
-        new_genre = Genre(genre_type=form.genre.data)
+        new_genre = Genres(genre_type=form.genre.data, description=form.description.data, rating=form.rating.data)
         db.session.add(new_genre)
         db.session.commit()
         return redirect(url_for('index'))
