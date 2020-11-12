@@ -1,6 +1,9 @@
 {% extends 'layout.html' %}
 {% block body_content %}
-    <form method='POST' action=''>
+
+<h2>Update Genre</h2>
+
+    <form action='' method='POST'>
         {{ form.hidden_tag() }}
         {{ form.genre.label }} {{ form.genre }} <br>
         {% if form.genre.errors %}
@@ -8,8 +11,7 @@
                 {{ error }}<br>
             {% endfor %}
         {% endif %}
-        {{ form.description.label }} {{ form.description }} <br>
-        {{ form.rating.label }} {{ form.rating }} <br>
+	<br>
         {{ form.submit }}
     </form>
 {% endblock body_content %}

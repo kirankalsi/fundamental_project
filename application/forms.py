@@ -43,9 +43,9 @@ class FilmForm(FlaskForm):
                 ]
             )
     length = StringField('Duration: (__hr__mins)')
-    #genre = SelectField('Genre',
-           # choices=[(genre for genre in genre_list)])
-    rating = SelectField('Age Rating',
+    genre = SelectField('Genre',
+            choices=[])
+    ratings = SelectField('Age Rating',
             choices=[('U','U'),
                     ('PG','PG'),
                     ('12A','12A'),
