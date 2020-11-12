@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+{% for film in film_list %}
+
+{{ film.id }} <br>
+{{ film.title }} <br>
+
+{% endfor %}
+{% endblock body_content %}

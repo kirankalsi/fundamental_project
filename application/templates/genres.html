@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+{% for genre in genre_list %}
+
+{{ genre.id }} <br>
+{{ genre.genre_type }} <br>
+
+{% endfor %}
+{% endblock body_content %}

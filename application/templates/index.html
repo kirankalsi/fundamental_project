@@ -1,18 +1,6 @@
 {% extends 'layout.html' %}
 {% block body_content %}
 
-{% for genre in genre_list %}
-
-{{ genre.id }} <br>
-{{ genre.genre_type }} <br>
-
-{% endfor %}
-
-{% for film in film_list %}
-
-{{ film.id }} <br>
-{{ film.title }} <br>
-
-{% endfor %}
+<p>Welcome to the Genres and Films application where you can read, add, update and delete any genres or films!</p>
 
 {% endblock body_content %}

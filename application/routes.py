@@ -6,9 +6,19 @@ from application.forms import GenreForm, SameGenreCheck, FilmForm, SameFilmCheck
 
 @app.route('/')
 def index():
+    #genre_list = Genres.query.all()
+    #film_list = Films.query.all()
+    return render_template('index.html')#, genre_list=genre_list, film_list=film_list)
+
+@app.route('/genre_list')
+def genre_list():
     genre_list = Genres.query.all()
+    return render_template('genres.html', genre_list=genre_list)
+
+@app.route('/film_list')
+def film_list():
     film_list = Films.query.all()
-    return render_template('index.html', genre_list=genre_list, film_list=film_list)
+    return render_template('films.html', film_list=film_list)
 
 @app.route('/add_genre', methods=['GET','POST'])
 def add_genre():
