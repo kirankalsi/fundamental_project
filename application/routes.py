@@ -75,3 +75,17 @@ def update_film(id):
         form.genre.data = film_to_update.genre_id
         form.ratings.data = film_to_update.age_rating
     return render_template('update_film.html', form=form)
+
+@app.route('/delete_genre/<int:id>')
+def delete_genre(id):
+    genre_to_delete = Genres.query.get(id)
+    db.session.delete(genre_to_delete)
+    db.session.commit()
+    return redirect(url_for('genre_list'))
+
+@app.route('/delete_film/<int:id>')
+def delete_film(id):
+    film_to_delete = Films.query.get(id)
+    db.session.delete(film_to_delete)
+    db.session.commit()
+    return redirect(url_for('film_list'))
