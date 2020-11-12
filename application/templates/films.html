@@ -2,11 +2,11 @@
 {% block body_content %}
 {% for film in film_list %}
 <p>
-{{ film.id }} <br>
-{{ film.title }} <br>
-{{ film.duration }} <br>
-{{ film.genre_id }} <br>
-{{ film.age_rating }} <br>
+<b>{{ film.title }}</b> <br>
+Film ID: {{ film.id }} <br>
+Duration: {{ film.duration }} <br>
+Genre ID: {{ film.genre_id }} <br>
+Age Rating: {{ film.age_rating }} <br>
 <form action='{{ url_for('update_film', id=film.id) }}'>
         <button>Update</button>
 </form>

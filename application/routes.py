@@ -27,7 +27,7 @@ def add_genre():
         new_genre = Genres(genre_type=form.genre.data, description=form.description.data, rating=form.rating.data)
         db.session.add(new_genre)
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('genre_list'))
     return render_template('add_genre.html', form=form)
 
 @app.route('/add_film', methods=['GET','POST'])
@@ -38,7 +38,7 @@ def add_film():
         new_film = Films(title=form.film.data, duration=form.length.data, genre_id=form.genre.data, age_rating=form.ratings.data)
         db.session.add(new_film)
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('film_list'))
     return render_template('add_film.html', form=form)
 
 @app.route('/update_genre/<int:id>', methods=['GET', 'POST'])

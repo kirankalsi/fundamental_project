@@ -3,10 +3,10 @@
 <h2>Genres</h2>
 {% for genre in genre_list %}
 <p>
-{{ genre.id }} <br>
-{{ genre.genre_type }} <br>
-{{ genre.description }} <br>
-{{ genre.rating }} <br>
+<b>{{ genre.genre_type }}</b> <br>
+Genre ID: {{ genre.id }} <br>
+Description: {{ genre.description }} <br>
+Popularity Rating: {{ genre.rating }} <br>
 <form action='{{ url_for('update_genre', id=genre.id) }}'>
 	<button>Update</button>
 </form>
