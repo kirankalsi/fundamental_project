@@ -11,7 +11,8 @@
                 {{ error }}<br>
             {% endfor %}
         {% endif %}
-	<br>
+	{{ form.description.label }} {{ form.description }} <br>
+	{{ form.rating.label }} {{ form.rating }} <br>
         {{ form.submit }}
     </form>
 {% endblock body_content %}

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+
+<h2>Update Film</h2>
+
+    <form action='' method='POST'>
+        {{ form.hidden_tag() }}
+        {{ form.film.label }} {{ form.film }} <br>
+        {% if form.film.errors %}
+            {% for error in form.film.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+        {{ form.length.label }} {{ form.length }} <br>
+	{{ form.genre.label }} {{ form.genre }} <br>
+        {{ form.ratings.label }} {{ form.ratings }} <br>
+        {{ form.submit }}
+    </form>
+{% endblock body_content %}

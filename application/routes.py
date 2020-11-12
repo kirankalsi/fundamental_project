@@ -41,16 +41,37 @@ def add_film():
         return redirect(url_for('index'))
     return render_template('add_film.html', form=form)
 
-'''
-@app.route('/update_genre/<int:genre_id>', methods=['GET', 'POST'])
-def update_genre(genre_id):
+@app.route('/update_genre/<int:id>', methods=['GET', 'POST'])
+def update_genre(id):
     form = GenreForm()
-    genre_to_update = Genres.query.get(genre_id)
+    genre_to_update = Genres.query.get(id)
     if form.validate_on_submit():
-        genre_to_update.genre = form.genre.data
+        genre_to_update.genre_type = form.genre.data
+        genre_to_update.description = form.description.data
+        genre_to_update.rating = form.rating.data
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('genre_list'))
     elif request.method == 'GET':
-        form.genre.data = genre_to_update.genre
+        form.genre.data = genre_to_update.genre_type
+        form.description.data = genre_to_update.description
+        form.rating.data = genre_to_update.rating
     return render_template('update_genre.html', form=form)
-'''
+
+@app.route('/update_film/<int:id>', methods=['GET', 'POST'])
+def update_film(id):
+    form = FilmForm()
+    film_to_update = Films.query.get(id)
+    form.genre.choices = [(genre.id, genre.genre_type) for genre in Genres.query.all()]
+    if form.validate_on_submit():
+        film_to_update.title = form.film.data
+        film_to_update.duration = form.length.data
+        film_to_update.genre_id = form.genre.data
+        film_to_update.age_rating = form.ratings.data
+        db.session.commit()
+        return redirect(url_for('film_list'))
+    elif request.method == 'GET':
+        form.film.data = film_to_update.title
+        form.length.data = film_to_update.duration
+        form.genre.data = film_to_update.genre_id
+        form.ratings.data = film_to_update.age_rating
+    return render_template('update_film.html', form=form)
