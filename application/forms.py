@@ -19,7 +19,7 @@ class SameGenreCheck:
         self.message = message
 
     def __call__(self, form, field):
-        genre_list = Films.query.all()
+        genre_list = Genres.query.all()
         for genre in genre_list:
             if field.data == genre.genre_type:
                 raise ValidationError(self.message)

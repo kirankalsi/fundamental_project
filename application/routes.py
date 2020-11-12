@@ -31,6 +31,7 @@ def add_film():
         return redirect(url_for('index'))
     return render_template('add_film.html', form=form)
 
+'''
 @app.route('/update_genre/<int:genre_id>', methods=['GET', 'POST'])
 def update_genre(genre_id):
     form = GenreForm()
@@ -42,3 +43,4 @@ def update_genre(genre_id):
     elif request.method == 'GET':
         form.genre.data = genre_to_update.genre
     return render_template('update_genre.html', form=form)
+'''
