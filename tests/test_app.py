@@ -19,11 +19,14 @@ class TestBase(TestCase):
         db.session.commit()
         db.drop_all()
         db.create_all()
+        
         new_genre = Genres(genre_type='Action', description='A film with a fast-moving plot, usually containing scenes of violence', rating=8)
-        new_film = Films(title='Superbad', duration='1hr 59mins', genre_id=3, age_rating='15')
-        #db.session.add(new_genre)
-        #db.session.add(new_film)
-        #db.session.commit()
+        db.session.add(new_genre)
+        db.session.commit()
+
+        new_film = Films(title='Superbad', duration='1hr 59mins', genre_id=new_genre.id, age_rating='15')
+        db.session.add(new_film)
+        db.session.commit()
 
     def tearDown(self):
         db.session.remove()
@@ -45,20 +48,20 @@ class TestViews(TestBase):
         self.assertEqual(response.status_code, 200)
 
     def test_update_genre_get(self):
-        response = self.client.get(url_for('update_genre'))
-        self.assertEqual(response.status_code,405)
+        response = self.client.get(url_for('update_genre', id=1))
+        self.assertEqual(response.status_code,200)
 
     def test_update_film_get(self):
-        response = self.client.get(url_for('update_film'))
-        self.assertEqual(response.status_code,405)
+        response = self.client.get(url_for('update_film', id=1))
+        self.assertEqual(response.status_code,200)
 
     def test_delete_genre_get(self):
-        response = self.client.get(url_for('delete_genre'))
-        self.assertEqual(response.status_code,405)
+        response = self.client.get(url_for('delete_genre', id=1))
+        self.assertEqual(response.status_code,302)
 
     def test_delete_film_get(self):
-        response = self.client.get(url_for('delete_film'))
-        self.assertEqual(response.status_code,405)
+        response = self.client.get(url_for('delete_film', id=1))
+        self.assertEqual(response.status_code,302)
 
 
 class TestAdd(TestBase):
@@ -67,7 +70,7 @@ class TestAdd(TestBase):
         response = self.client.post(
             url_for('add_genre'),
             data = dict(
-		genre_type='Thriller',
+		genre='Thriller',
 		description='A film that induces strong feelings of excitement, anxiety, tension, suspense, fear, and other similar emotions',
 		rating=8)
         )
@@ -77,10 +80,10 @@ class TestAdd(TestBase):
         response = self.client.post(
             url_for('add_film'),
             data = dict(
-		title='Avengers: Endgame',
-		duration='3hr 2mins',
-		genre_id=8,
-		age_rating='12A')
+		film='Avengers: Endgame',
+		length='3hr 2mins',
+		genre=1,
+		ratings='12A')
         )
         self.assertIn(b'Avengers: Endgame',response.data)
 
@@ -115,18 +118,14 @@ class TestUpdate_genre(TestBase):
 
 class TestDelete(TestBase):
 
-    def test_delete_genre_post(self):
-        response = self.client.post(
-                'delete_genre/<int:id>',
-            data = dict(id='1'),
-            follow_redirects=True
-            )
-        self.assertEqual(response.status_code,200)
-
     def test_delete_film_post(self):
-        response = self.client.post(
-            'delete_film/<int:id>',
-            data = dict(id='1'),
-            follow_redirects=True
+        response = self.client.get(
+            'delete_film/1'
             )
-        self.assertEqual(response.status_code,200)
+        self.assertEqual(response.status_code,302)
+
+    def test_delete_genre_post(self):
+        response = self.client.get(
+                'delete_genre/1'
+            )
+        self.assertEqual(response.status_code,302)
