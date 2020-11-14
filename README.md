@@ -24,10 +24,8 @@ Website:
 ### Brief
 
 #### Requirements
-The minimum viable product was to create an application that utilises create, read,
-update and delete (CRUD) functions using supporting tools,
-methodologies and technologies that encapsulate all core modules
-covered during training so far. We also had to include:
+The minimum viable product was to create an application that utilises create, read, update and delete (CRUD) functions using supporting tools,
+methodologies and technologies that encapsulate all core modules covered during training so far. We also had to include:
 * A Trello board with full expansion
 on user stories, use cases and tasks needed to complete the project.
 * A relational database used to store data persistently for the
@@ -65,11 +63,11 @@ enthusiasts to movie newbies which allows them to:
 #### Database Structure
 Below is an evolution of my ERD designs
 ##### ERD Diagram 1
-The image below shows my first ERD diagram, I initially wanted my two tables to have a one-to-many
-relationship.
+The image below shows my first ERD diagram, I initially wanted my two tables to have a one-to-many relationship.
 ![erdfirst](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft1.png)
-##### ERD Diagram 2
-
+##### ERD Diagram 200
+The next image below shows my second draft ERD diagram, I've changed the relationship to many-to-many.
+![erdsecond](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft2.png)
 #### CI Pipeline
 
 ### Future Improvements
