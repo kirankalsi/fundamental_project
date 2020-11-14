@@ -1,10 +1,10 @@
 # The Ultimate Genres and Films Application
-##Fundameental Project
+## Fundameental Project
 
 Contents
 * Resources
 * Breif
- * Requirements
+  * Requirements
  * My Approach
 * Architecture
  * Database Structure
