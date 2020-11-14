@@ -5,10 +5,10 @@ Contents
 * Resources
 * Breif
   * Requirements
- * My Approach
+  * My Approach
 * Architecture
- * Database Structure
- * CI Pipeline
+  * Database Structure
+  * CI Pipeline
 * Project Tracking
 * Risk Assessment
 * Testing
