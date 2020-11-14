@@ -19,15 +19,58 @@ Contents
 
 ### Resources
 Website: 
-[Trello Board]()
+[Trello Board](https://trello.com/b/dubA6cfY/my-project)
 
 ### Brief
-An application made for everyone from film enthusiasts to movie newbies which allows
-them to read films and genres from tables; add new film and genre entries if it is 
-not already in the database; update film and genre entries
-delete entries from a database. It will include film titles, age rating, duration
-and other details. 
 
+#### Requirements
+The minimum viable product was to create an application that utilises create, read,
+update and delete (CRUD) functions using supporting tools,
+methodologies and technologies that encapsulate all core modules
+covered during training so far. We also had to include:
+* A Trello board with full expansion
+on user stories, use cases and tasks needed to complete the project.
+* A relational database used to store data persistently for the
+project
+* Documentation from a design phase describing the application architecture
+and a detailed Risk Assessment
+* A functional CRUD application created in Python, following best
+practices and design principles
+* Fully designed test suites for the application, as
+well as automated tests for validation of the application
+* A functioning front-end website and integrated API's, using Flask
+* Code fully integrated into a Version Control System using the
+Feature-Branch model which will subsequently be built through a CI
+server and deployed to a cloud-based virtual machine.
+
+#### My Approach
+To fulfil these requirements I decided to make an application made for everyone from film 
+enthusiasts to movie newbies which allows them to:
+* Create genres:
+  * Title
+  * Description
+  * Popularity Rating
+* Create films:
+  * Title
+  * Duration
+  * Genre
+  * Age Rating
+* View and update genres and films
+* Delete genres and films
+
+##### Stretch Goals
+
+### Architecture
+
+#### Database Structure
+Below is an evolution of my ERD designs
+##### ERD Diagram 1
+The image below shows my first ERD diagram, I initially wanted my two tables to have a one-to-many
+relationship.
+![erdfirst](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft1.png)
+##### ERD Diagram 2
+
+#### CI Pipeline
 
 ### Future Improvements
 This application successfully implemented CRUD functionalities. I want to focus more
