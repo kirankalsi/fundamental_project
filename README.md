@@ -69,6 +69,7 @@ The next image below shows my final draft ERD diagram, I've changed the relation
 ![erdsecond](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft2.png)
 #### CI Pipeline
 The image below represents my continuous integration pipeline with the associated frameworks and services related to them. It is a breakdown of the services and tools used to develop and deploy a well-tested, functioning program. The services I have chosen within the pipeline provide the most efficient method of rapid development to be automated and tested.
+![CIpipeline](https://github.com/kirankalsi/fundamental_project/blob/main/images/CIpipeline.PNG)
 
 ### Project Tracking
 Following agile methodologies, Trello was used to track the progress of the project and to demonstrate my workflow, from planning to testing and finally to completion. Below is a screenshot of my board.
