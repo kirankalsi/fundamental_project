@@ -87,6 +87,19 @@ Unit testing on my application folder came to 81% coverage overall as shown belo
 Furthermore I used pytest and selenium for my integrated testing. This had completely passed successfully as displayed above. When running pytest --cov --cov-report term-missing I can see which parts of my application that are not tested. This is displayed below.
 ![pytestmissingterm](https://github.com/kirankalsi/fundamental_project/blob/main/images/pytest.PNG)
 
+### Front-End Design
+My front-end design is still in its early stages as it is built using basic HTML. However it meets the MVP
+and I am happy with its functionality. Below is the homepage which gives a brief description of what the application is about.
+It also gives the user choices within the navigation bar to go to different areas of the application, which will be extended to every page.
+![homepage](https://github.com/kirankalsi/fundamental_project/blob/main/images/homepage.PNG)
+Navigating to the 'Add genre' page allows users to input data into the fields below and add a genre to the genre list.
+![addgenre](https://github.com/kirankalsi/fundamental_project/blob/main/images/addgenre.PNG)
+I expect the genre list to display the genres added, including update and delete buttons.
+![genrelist](https://github.com/kirankalsi/fundamental_project/blob/main/images/genrelist.PNG)
+The film list works in the same manner. Similar to the genre list, if there is a film already inputted with the same name
+the application will display an error message, as shown below.
+![filmexists](https://github.com/kirankalsi/fundamental_project/blob/main/images/filmexists.PNG)
+
 ### Future Improvements
 This application successfully implemented CRUD functionalities. I want to focus more
 on TDD
