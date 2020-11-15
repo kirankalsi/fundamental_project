@@ -1,6 +1,11 @@
 {% extends 'layout.html' %}
 {% block body_content %}
 <h2>Film List</h2>
+
+{% if totals['film_list_total'] == 0 %}
+        <h3>Add some films</h3>
+{% endif %}
+
 {% for film in film_list %}
 <p>
 <b>{{ film.title }}</b> <br>
