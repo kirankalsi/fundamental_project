@@ -90,7 +90,7 @@ Furthermore I used pytest and selenium for my integrated testing. This had compl
 ### Front-End Design
 My front-end design is still in its early stages as it is built using basic HTML. However it meets the MVP
 and I am happy with its functionality. Below is the homepage which gives a brief description of what the application is about.
-It also gives the user choices within the navigation bar to go to different areas of the application, which will be extended to every page.
+It also gives the user choices within the navigation bar to go to different areas of the application, which will be extended to every page.  
 ![homepage](https://github.com/kirankalsi/fundamental_project/blob/main/images/homepage.PNG)
 Navigating to the 'Add genre' page allows users to input data into the fields below and add a genre to the genre list.
 ![addgenre](https://github.com/kirankalsi/fundamental_project/blob/main/images/addgenre.PNG)
