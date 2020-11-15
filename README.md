@@ -18,8 +18,8 @@ Contents
 
 
 ### Resources
-Website: 
 [Trello Board](https://trello.com/b/dubA6cfY/my-project)
+[Risk Assessment](https://docs.google.com/spreadsheets/d/1RD_fca3jRA9D0HOCS2oe6eftotsjKILWXCJ5MKXBjcs/edit?usp=sharing)
 
 ### Brief
 
@@ -42,13 +42,12 @@ Feature-Branch model which will subsequently be built through a CI
 server and deployed to a cloud-based virtual machine.
 
 #### My Approach
-To fulfil these requirements I decided to make an application made for everyone from film 
-enthusiasts to movie newbies which allows them to:
-* Create genres:
+To fulfil these requirements I decided to make an application made for everyone from film enthusiasts to movie newbies which allows them to:
+* Create genres that stores a:
   * Title
   * Description
   * Popularity Rating
-* Create films:
+* Create films that stores a:
   * Title
   * Duration
   * Genre
@@ -61,14 +60,30 @@ enthusiasts to movie newbies which allows them to:
 ### Architecture
 
 #### Database Structure
-Below is an evolution of my ERD designs
+I have created entity relationship (ERD) diagrams to show the structure of my database and the relationships taking place between the tables. Below is an evolution of my ERD designs
 ##### ERD Diagram 1
 The image below shows my first ERD diagram, I initially wanted my two tables to have a one-to-many relationship.
 ![erdfirst](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft1.png)
 ##### ERD Diagram 200
-The next image below shows my second draft ERD diagram, I've changed the relationship to many-to-many.
+The next image below shows my final draft ERD diagram, I've changed the relationship to many-to-many.
 ![erdsecond](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft2.png)
 #### CI Pipeline
+The image below represents my continuous integration pipeline with the associated frameworks and services related to them. It is a breakdown of the services and tools used to develop and deploy a well-tested, functioning program. The services I have chosen within the pipeline provide the most efficient method of rapid development to be automated and tested.
+
+### Project Tracking
+Trello was used to track the progress of the project, from planning to testing and finally to completion. Below is a screenshot of my board.#
+You can find the full Trello Board [Here](https://trello.com/b/dubA6cfY/my-project)
+
+### Risk Assessment
+Below is a screenshot of my risk assessment for the project. This is where I have outlined potential risks, their impacts and mitigation techniques that I may need.
+The full document can be found [here](https://docs.google.com/spreadsheets/d/1RD_fca3jRA9D0HOCS2oe6eftotsjKILWXCJ5MKXBjcs/edit?usp=sharing)
+
+### Testing
+I used pytest to run unit tests on my application in which I tested most of my functions.
+Unit testing on my application folder came to 81% coverage overall as shown below.
+![coverage](https://github.com/kirankalsi/fundamental_project/blob/main/images/coverage.PNG)
+Furthermore I used pytest and selenium for my integrated testing. This had completely passed successfully as displayed above.
+
 
 ### Future Improvements
 This application successfully implemented CRUD functionalities. I want to focus more
