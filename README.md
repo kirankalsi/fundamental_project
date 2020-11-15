@@ -65,7 +65,7 @@ I have created entity relationship (ERD) diagrams to show the structure of my da
 The image below shows my first ERD diagram, I initially wanted my two tables to have a one-to-many relationship.
 ![erdfirst](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft1.png)
 ##### ERD Diagram 200
-The next image below shows my final draft ERD diagram, I've changed the relationship to many-to-many.
+The next image below shows my final draft ERD diagram, I've changed the relationship to many-to-many. Including an intermediate table.
 ![erdsecond](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft2.png)
 #### CI Pipeline
 The image below represents my continuous integration pipeline with the associated frameworks and services related to them. It is a breakdown of the services and tools used to develop and deploy a well-tested, functioning program. The services I have chosen within the pipeline provide the most efficient method of rapid development to be automated and tested.
@@ -101,9 +101,8 @@ The film list works in the same manner. Similar to the genre list, if there is a
 ![filmexists](https://github.com/kirankalsi/fundamental_project/blob/main/images/filmexists.PNG)  
 
 ### Future Improvements
-This application successfully implemented CRUD functionalities. I want to focus more
-on TDD
-I want to improve the project testing and hope to see the overall coverage increase to at least...
-In future, I would love the application to be more user friendly by adding... for example if there was no genres/films
-message to prompt to add genre/film
-Add order by eg:genre as mentioned in user stories
+This application successfully implemented CRUD functionalities. However there are a number of improvements I would like to implement:
+* Improve the project testing and hope to see the overall coverage increase and be closer to 100%
+* Make the application to be more user friendly to improve the overall user experience (eg: present data in tables)
+* Add a filter which orders genres and films by IDs, most recent and alphabetically
+* Update the ratings system to show a thumbs up when above and thumbs down when below a certain number
