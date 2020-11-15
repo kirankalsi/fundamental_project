@@ -55,8 +55,6 @@ To fulfil these requirements I decided to make an application made for everyone 
 * View and update genres and films
 * Delete genres and films
 
-##### Stretch Goals
-
 ### Architecture
 
 #### Database Structure
@@ -64,8 +62,8 @@ I have created entity relationship (ERD) diagrams to show the structure of my da
 ##### ERD Diagram 1
 The image below shows my first ERD diagram, I initially wanted my two tables to have a one-to-many relationship.
 ![erdfirst](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft1.png)
-##### ERD Diagram 200
-The next image below shows my final draft ERD diagram, I've changed the relationship to many-to-many. Including an intermediate table.
+##### ERD Diagram 2
+The next image below shows my final draft ERD diagram, I've changed the relationship to many-to-many. Including an intermediate table.  
 ![erdsecond](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft2.png)
 #### CI Pipeline
 The image below represents my continuous integration pipeline with the associated frameworks and services related to them. It is a breakdown of the services and tools used to develop and deploy a well-tested, functioning program. The services I have chosen within the pipeline provide the most efficient method of rapid development to be automated and tested.
@@ -74,7 +72,7 @@ The image below represents my continuous integration pipeline with the associate
 ### Project Tracking
 Following agile methodologies, Trello was used to track the progress of the project and to demonstrate my workflow, from planning to testing and finally to completion. Below is a screenshot of my board.
 You can find the full Trello Board [Here](https://trello.com/b/dubA6cfY/my-project).
-!
+![trello](https://github.com/kirankalsi/fundamental_project/blob/main/images/trello.PNG)
 
 ### Risk Assessment
 Below is a screenshot of my risk assessment for the project. This is where I have outlined potential risks, their impacts and mitigation techniques that I may need.
