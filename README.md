@@ -13,7 +13,6 @@ Contents
 * Risk Assessment
 * Testing
 * Front-End Design
-* Issues
 * Future Improvements
 
 
