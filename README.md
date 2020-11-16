@@ -17,7 +17,7 @@ Contents
 
 
 ### Resources
-[Trello Board](https://trello.com/b/dubA6cfY/my-project)
+[Trello Board](https://trello.com/b/dubA6cfY/my-project)  
 [Risk Assessment](https://docs.google.com/spreadsheets/d/1RD_fca3jRA9D0HOCS2oe6eftotsjKILWXCJ5MKXBjcs/edit?usp=sharing)
 
 ### Brief
@@ -99,7 +99,13 @@ The film list works in the same manner. Similar to the genre list, if there is a
 
 ### Future Improvements
 This application successfully implemented CRUD functionalities. However there are a number of improvements I would like to implement:
-* Improve the project testing and hope to see the overall coverage increase and be closer to 100%
-* Make the application to be more user friendly to improve the overall user experience (eg: present data in tables)
+* Make relationship between tables as drafted (many-to-many), use SelectMultipleField in forms
+* Improve the project testing, overall coverage should increase and be closer to 100%
+* Currently I have to manually build in Jenkins, I want this process to be automated
+* Have more valiadators, as described in the risk assessment
+* Make the application more user friendly to improve the overall user experience (eg: present data in tables)
 * Add a filter which orders genres and films by IDs, most recent and alphabetically
 * Update the ratings system to show a thumbs up when above and thumbs down when below a certain number
+
+### Author
+**Kiran Kalsi**
