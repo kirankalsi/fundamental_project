@@ -65,7 +65,7 @@ The image below shows my first ERD diagram, I initially wanted my two tables to 
 The next image below shows my final draft ERD diagram, I've changed the relationship to many-to-many. Including an intermediate table.  
 ![erdsecond](https://github.com/kirankalsi/fundamental_project/blob/main/images/Films-db-Draft2.png)
 #### CI Pipeline
-The image below represents my continuous integration pipeline with the associated frameworks and services related to them. It is a breakdown of the services and tools used to develop and deploy a well-tested, functioning program. The services I have chosen within the pipeline provide the most efficient method of rapid development to be automated and tested.
+The image below represents my continuous integration pipeline with the associated frameworks and services related to them. It is a breakdown of the services and tools used to develop and deploy a well-tested, functioning program. The services I have chosen within the pipeline provide the most efficient method of rapid development to be tested.
 ![CIpipeline](https://github.com/kirankalsi/fundamental_project/blob/main/images/CIpipeline.PNG)
 
 ### Project Tracking
