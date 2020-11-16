@@ -83,11 +83,11 @@ I used pytest to run unit tests on my application in which I tested most of my f
 Unit testing on my application folder came to 81% coverage overall as shown below.
 ![coverage](https://github.com/kirankalsi/fundamental_project/blob/main/images/coverage.PNG)
 Furthermore I used pytest and selenium for my integrated testing.
-Integrated Testing instructions:
-sudo apt-get install -y unzip
-sudo apt-get install -y chromium-browser
-wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
+Integrated Testing instructions:  
+sudo apt-get install -y unzip  
+sudo apt-get install -y chromium-browser  
+wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip  
+unzip chromedriver_linux64.zip  
 * When writing the test_int.py make sure to fill in the correct path to chromedriver
 This had completely passed successfully as displayed above. When running pytest --cov --cov-report term-missing I can see which parts of my application that are not tested. This is displayed below.
 ![pytestmissingterm](https://github.com/kirankalsi/fundamental_project/blob/main/images/pytest.PNG)
