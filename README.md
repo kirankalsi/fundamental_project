@@ -1,5 +1,5 @@
 # The Ultimate Genres and Films Application
-## Fundameental Project
+## Fundamental Project
 
 Contents
 * Resources
