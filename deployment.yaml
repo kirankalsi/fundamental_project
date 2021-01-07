@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fundamental-project
+spec:
+  selector:
+    app: fundamental-project
+  ports:
+  - protocol: "TCP"
+    port: 5000
+    targetPort: 5000
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fundamental-project
+  labels: 
+    app: fundamental-project
+spec:
+  selector:
+    matchLabels:
+      app: fundamental-project
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: fundamental-project
+    spec:
+      containers:
+      - name: fundamental-project
+        image: kirankalsi/fundamental_project:latest
+        env:
+        - name: MYSQL_DATABASE
+          value: "sqlite:///data.db"
+        ports:
+        - containerPort: 5000
